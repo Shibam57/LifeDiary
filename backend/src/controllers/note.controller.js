@@ -118,7 +118,7 @@ const getAllNotes = asyncHandler(async(req, res)=>{
     const limitNumber = parseInt(limit);
     const skip = (pageNumber - 1) * limitNumber;
 
-    const userId=req.user?._id;
+    const userId=req.user?._id; 
 
     if(!userId){
         throw new ApiError(401, "Unauthorized")
